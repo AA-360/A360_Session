@@ -1,0 +1,64 @@
+{
+    "name": "Session_Uts",
+    "label": "Session_Uts",
+    "description": "",
+    "group": "com.automationanywhere",
+    "artifactName": "Session_Uts",
+    "packageVersion": "1.0-20210811-120805",
+    "codeVersion": "1.0-20210811-120805",
+    "author": "",
+    "commands": [
+        {
+            "name": "sessionDemo",
+            "label": "[[SessionDemo.label]]",
+            "description": "[[SessionDemo.description]]",
+            "mainClass": "com.automationanywhere.botcommand.samples.commands.basic.SessionDemoCommand",
+            "icon": "sample.svg",
+            "attributes": [
+                {
+                    "name": "SessionName",
+                    "label": "Session Name",
+                    "type": "TEXT",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "SessionName2",
+                    "label": "Session Name",
+                    "type": "SESSION"
+                }
+            ]
+        },
+        {
+            "name": "SharedSessionDemoUpperCaseParent",
+            "label": "SharedSessionDemoUpperCaseParent",
+            "description": "SharedSessionDemoUpperCaseParent",
+            "nodeLabel": "SharedSessionDemoUpperCaseParent",
+            "mainClass": "com.automationanywhere.botcommand.samples.commands.basic.SharedSessionDemoUpperCaseParentCommand",
+            "returnType": "SESSION",
+            "returnSubtype": "UNDEFINED",
+            "returnLabel": "SharedSessionDemoUpperCaseParent",
+            "returnRequired": true,
+            "attributes": [
+                {
+                    "name": "session",
+                    "label": "SetSession",
+                    "description": "SetSession",
+                    "type": "TEXT",
+                    "defaultValue": {
+                        "string": "Default",
+                        "type": "STRING"
+                    },
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
